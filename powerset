@@ -1,4 +1,4 @@
-ef powerset(a, lst ):
+def powerset(a, lst ):
     if len(a) == 0:
         print(lst)
     else:
