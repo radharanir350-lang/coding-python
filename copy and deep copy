@@ -1,0 +1,21 @@
+# b,a are reffernce to same object /points to same memory location
+#c is shallow copy of a, separate memory location but same content
+
+a=[1,10,2]
+b=a
+c=a.copy()
+b.append(3)
+c.append(4)
+print(a)
+print(b)
+print(c)
+
+
+
+# for nested list we have to use deepcopy to acess the inner list as well, otherwise it will be shallow copy and changes in inner list of b will reflect in a as well
+import copy
+a=[[1,2],[3,4]]
+b=copy.deepcopy(a)
+b[0].append(10)
+print(a)
+print(b)
