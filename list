@@ -1,0 +1,4 @@
+list=[34,56,"hello",True,56.78]
+print(list)
+for i in list:
+    print(i)
