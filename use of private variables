@@ -1,0 +1,40 @@
+class node:
+    def __init__(self,val):
+        self.__data=val
+        self.__left=None
+        self.__right=None
+    def campare(self,val):
+        if self.__data>val:
+            self.__left=insert(self.__left,val)
+        else:
+            self.__right=insert(self.__right,val)
+    def inorder(self):
+        if self.__left:
+            self.__left.inorder()
+        print(self.__data, end=' ')
+        if self.__right:
+            self.__right.inorder()
+    def printtree(self):
+        print("Inorder traversal:")
+        self.inorder()
+        print()
+
+
+
+
+
+def insert(root,val):
+    if root is None:
+        root = node(val)
+    else:
+        root.campare(val)
+    
+    return root
+    
+            
+a=[8,4,1,7,3,9,6,2,5]
+
+root=None
+for i in a:
+    root=insert(root,i)
+root.printtree()
