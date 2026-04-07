@@ -1,0 +1,23 @@
+import pandas as pd
+
+data = {
+    "name": ['a','b','c','d'],
+    "roll": ['1','2','5','6'],
+    "marks":['20','14','13','9']
+}
+
+df=pd.DataFrame(data)
+
+print(df)
+
+data={
+    "name":['a','b','c','d'],
+    "roll":['1','2','5','6'],
+    "attendace":['0.95','0.88','0.92','0.90']
+}
+df1=pd.DataFrame(data)
+
+df2=df1+df
+print(df2)
+df3=pd.merge(df,df1,on=["name","roll"],how="outer")
+print(df3)
