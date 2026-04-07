@@ -1,0 +1,17 @@
+str ="I am busy right now"
+str.split()
+print(str.split())
+print(" ".join(str.split()[::-1]))
+print(str.split()[::-1])
+
+a=[2,5,4,10,1,5,3]
+print(a[5:1:-1])
+
+
+b=([2,3],[4,5,10])
+b[0].append(5)
+print(b)
+b[0][0]+=1
+print(b)
+b[0]=[5,3,2]
+print(b)
